@@ -14,7 +14,7 @@ h5py>=3.10.0                # reading the .h5 RetinaNet checkpoint
 ultralytics>=8.1.0           # YOLOv8 - used for SKU110K shelf-object detection
 
 # ---- Image Processing ----
-opencv-python>=4.9.0
+opencv-python-headless>=4.9.0
 Pillow>=10.2.0
 albumentations>=1.4.0
 numpy>=1.26.0
