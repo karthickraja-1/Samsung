@@ -1,0 +1,46 @@
+# ============================================================
+# Smart Retail Shelf Assistant - Requirements
+# ============================================================
+
+# ---- Deep Learning Frameworks ----
+torch>=2.2.0
+torchvision>=0.17.0
+tensorflow>=2.12,<2.16; python_version < "3.14"   # required only for the pretrained SKU110K RetinaNet checkpoint
+                            # (iou_resnet50_csv_06.h5) and optional Keras/TF classifier path.
+                            # Python 3.14 users can run the app with DETECTION_BACKEND=yolov8.
+h5py>=3.10.0                # reading the .h5 RetinaNet checkpoint
+
+# ---- Object Detection (Product Localization on Shelf) ----
+ultralytics>=8.1.0           # YOLOv8 - used for SKU110K shelf-object detection
+
+# ---- Image Processing ----
+opencv-python>=4.9.0
+Pillow>=10.2.0
+albumentations>=1.4.0
+numpy>=1.26.0
+pandas>=2.2.0
+
+# ---- LLM / GenAI ----
+openai>=1.14.0                # OpenAI GPT API client (swap for Gemini/Mistral/Llama clients as needed)
+langchain>=0.1.13
+langchain-community>=0.0.29
+tiktoken>=0.6.0
+
+# ---- Vector DB (optional RAG for product knowledge base) ----
+faiss-cpu>=1.8.0
+chromadb>=0.4.24
+
+# ---- OCR (optional - reading price tags / labels) ----
+easyocr>=1.7.1
+
+# ---- Deployment ----
+streamlit>=1.32.0
+fastapi>=0.110.0
+uvicorn>=0.29.0
+
+# ---- Utilities ----
+python-dotenv>=1.0.1
+tqdm>=4.66.0
+matplotlib>=3.8.0
+scikit-learn>=1.4.0
+pyyaml>=6.0.1
